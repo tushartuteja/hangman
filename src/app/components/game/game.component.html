@@ -1,0 +1,11 @@
+<div class="centergame">
+  <app-hangman [guesses]="guesses"></app-hangman>
+  <app-word [word]="word" [guess_list]="guess_list"></app-word>
+  <br>
+  <div>
+    <label>Guess</label>
+    <input type="text" />
+    <input type="submit" (click)="submit()">
+  </div>
+  <app-keyboard></app-keyboard>
+</div>
