@@ -1,0 +1,13 @@
+:host{
+	display: flex;
+	flex-direction: column;
+}
+
+:host > div{
+	display: flex;
+	justify-content: space-around;
+}
+
+:host > div > div {
+	width: 20px;
+};
