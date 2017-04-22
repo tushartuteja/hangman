@@ -8,7 +8,7 @@ import {Component, Input, OnInit} from '@angular/core';
 export class HangmanComponent implements OnInit {
 
   @Input() guesses;
-
+ @Input() word_length;
   constructor() { }
 
   ngOnInit() {

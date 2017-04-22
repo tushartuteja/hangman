@@ -8,6 +8,7 @@ import { GameComponent } from './components/game/game.component';
 import { HangmanComponent } from './components/hangman/hangman.component';
 import { KeyboardComponent } from './components/keyboard/keyboard.component';
 import { WordComponent } from './components/word/word.component';
+import { CharacterComponent } from './components/character/character.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { WordComponent } from './components/word/word.component';
     GameComponent,
     HangmanComponent,
     KeyboardComponent,
-    WordComponent
+    WordComponent,
+    CharacterComponent
   ],
   imports: [
     BrowserModule,

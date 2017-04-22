@@ -11,3 +11,22 @@
 :host > div > div {
 	width: 20px;
 };
+
+
+.guessed {
+	text-decoration: line-through;
+	background-color: red;
+}
+
+
+.char{
+	display: flex;
+    justify-content: space-around;
+    font-size: 30px;
+    cursor: pointer; cursor: hand; 
+
+}
+
+div.top, div.middle{
+	margin-bottom: 8px;
+}

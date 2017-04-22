@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-keyboard',
@@ -8,6 +8,7 @@ import { Component, OnInit, Input } from '@angular/core';
 export class KeyboardComponent implements OnInit {
 
 	@Input() guess_list;
+  @Output() guess_event = new EventEmitter();
 	top = ['q','w','e','r','t','y','u','i','o','p'];
 	middle = ['a','s','d','f','g','h','j','k','l'];
 	bottom = ['z','x','c','v','b','n','m'];
@@ -18,11 +19,15 @@ export class KeyboardComponent implements OnInit {
 
 
   class_of(ch) {
-  	if (this.guess_list.indexOf(ch) > 0){
-  		return "guessed";
+  	if (this.guess_list.indexOf(ch) > -1){
+  		return false;
   	}else{
-  		return "remaining";
+  		return true;
   	}
+  }
+
+  guess(ch){
+    this.guess_event.emit({char: ch});
   }
 
 }

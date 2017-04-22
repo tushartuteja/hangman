@@ -1,24 +1,31 @@
 <div class="top">
-<div *ngFor="let ch of top" [class]="class_of(ch)">
+<button *ngFor="let ch of top" [ngClass]="{guessed: class_of(ch)}" class="char" (click)="guess(ch)">
 {{ch}}
 
-</div>
+</button>
 </div>
 
 
 
 <div class="middle">
-<div *ngFor="let ch of middle" [class]="class_of(ch)">
+<button *ngFor="let ch of middle" [ngClass]="{guessed: class_of(ch)}" class="char" (click)="guess(ch)">
 {{ch}}
 
-</div>
+</button>
 
 </div>
 
 
 <div class="bottom">
-<div *ngFor="let ch of bottom" [class]="class_of(ch)">
+<button *ngFor="let ch of bottom" [ngClass]="{guessed: class_of(ch)}" class="char" (click)="guess(ch)">
 {{ch}}
 
+</button>
 </div>
-</div>
+
+<style type="text/css">
+	.guessed{
+		text-decoration: line-through;
+	background-color: red;
+	}
+</style>
