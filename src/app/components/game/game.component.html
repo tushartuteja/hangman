@@ -2,11 +2,6 @@
   <app-hangman [guesses]="guesses" [word_length]="word.length"></app-hangman>
   <app-word [(showword)]="showword" ></app-word>
   <br>
-  <div>
-    <label>Guess</label>
-    <input type="text" [(ngModel)] = "ch" />
-    <input type="submit" (click)="submit()">
-  </div>
   <br>
   <app-keyboard [(guess_list)]="guess_list" (guess_event)="guess($event)"></app-keyboard>
 </div>

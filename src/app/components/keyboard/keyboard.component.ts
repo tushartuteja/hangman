@@ -19,11 +19,7 @@ export class KeyboardComponent implements OnInit {
 
 
   class_of(ch) {
-  	if (this.guess_list.indexOf(ch) > -1){
-  		return false;
-  	}else{
-  		return true;
-  	}
+  	return !(this.guess_list.indexOf(ch) > -1);
   }
 
   guess(ch){
